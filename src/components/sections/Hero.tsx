@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Play } from "lucide-react";
-import heroImage from "@/assets/hero-pianist.jpg";
+const heroImage = "/lovable-uploads/43dd5795-15d8-4fe9-9613-45e3b9890184.png";
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -19,9 +19,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Piano keys artistic background"
-          className="w-full h-full object-cover object-center"
+          alt="Pianist performing in atmospheric lighting"
+          className="w-full h-full object-cover object-center blur-sm"
         />
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/80" />
       </div>
 
