@@ -25,9 +25,7 @@ const Navigation = ({ className }: NavigationProps) => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
     { name: "Performances", href: "#performances" },
-    { name: "Media", href: "#media" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -44,10 +42,10 @@ const Navigation = ({ className }: NavigationProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={cn(
+        className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md piano-shadow"
+          ? "bg-background/90 backdrop-blur-lg elegant-shadow border-b border-border/30"
           : "bg-transparent",
         className
       )}
@@ -75,7 +73,7 @@ const Navigation = ({ className }: NavigationProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.href)}
-                className="font-inter font-medium text-sm tracking-wide transition-colors hover:text-accent-foreground relative group"
+                className="font-inter font-medium text-sm tracking-wider uppercase text-muted-foreground hover:text-foreground transition-cinematic relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />

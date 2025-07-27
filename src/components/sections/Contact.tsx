@@ -51,25 +51,54 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-gradient-elegant">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-32 bg-gradient-hero relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/4 left-1/4 w-40 h-40 border border-accent/30 rounded-full"
+        />
+        <motion.div
+          animate={{ rotate: -360 }}
+          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-1/4 right-1/4 w-32 h-32 border border-accent/20 rounded-full"
+        />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-center mb-20"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-light mb-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              className="font-playfair text-5xl md:text-6xl lg:text-7xl font-light mb-8"
+            >
               Let's Create <span className="text-cinematic">Together</span>
-            </h2>
-            <div className="w-24 h-px bg-accent mx-auto mb-8" />
-            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="w-24 h-px bg-accent mx-auto mb-8"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="font-inter text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            >
               Whether you're interested in booking a performance, commissioning a composition, 
               or exploring collaborative opportunities, I'd love to hear from you.
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-12">

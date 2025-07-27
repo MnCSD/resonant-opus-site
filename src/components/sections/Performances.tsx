@@ -63,25 +63,46 @@ const Performances = () => {
   ];
 
   return (
-    <section id="performances" className="py-20 lg:py-32">
-      <div className="container mx-auto px-6">
+    <section id="performances" className="py-32 bg-gradient-elegant relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-accent rounded-full animate-float" />
+        <div className="absolute bottom-1/3 right-1/4 w-24 h-24 border border-accent rounded-full animate-float" style={{animationDelay: '2s'}} />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-center mb-20"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-light mb-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              className="font-playfair text-5xl md:text-6xl lg:text-7xl font-light mb-8"
+            >
               <span className="text-cinematic">Performances</span> & Recordings
-            </h2>
-            <div className="w-24 h-px bg-accent mx-auto mb-8" />
-            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="w-24 h-px bg-accent mx-auto mb-8"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="font-inter text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            >
               From intimate recital halls to grand concert venues, each performance is a unique conversation between 
               artist, instrument, and audience.
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Upcoming & Recent Performances */}
