@@ -57,7 +57,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            className="font-playfair text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight"
+            className="font-playfair text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight text-white"
           >
             <span className="block">Dimitris</span>
             <motion.span
@@ -76,18 +76,18 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="flex items-center justify-center space-x-2 mb-8"
           >
-            <div className="w-12 h-px bg-accent" />
-            <p className="font-inter text-lg md:text-xl tracking-widest uppercase text-muted-foreground">
+            <div className="w-12 h-px bg-white/60" />
+            <p className="font-inter text-lg md:text-xl tracking-widest uppercase text-white/80">
               Pianist · Composer · Performer
             </p>
-            <div className="w-12 h-px bg-accent" />
+            <div className="w-12 h-px bg-white/60" />
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="font-inter text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="font-inter text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
             Crafting emotional landscapes through classical and contemporary piano performances.
             Each note tells a story, each silence holds meaning.
